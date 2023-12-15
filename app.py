@@ -33,7 +33,7 @@ fig1 = px.histogram(
 fig1.update_layout(xaxis_range=[0, 100])
 col1.plotly_chart(fig1, theme="streamlit", use_container_width=True)
 
-texp_mean = data[selection]["texp"].mean().round(1)
+texp_mean = round(data[selection]["texp"].mean())
 fig2 = px.scatter(
     data[selection], x="horas", y="desempenho", title=f"texp médio = {texp_mean}"
 )
